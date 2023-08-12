@@ -24,14 +24,14 @@ void search_in_path(const fs::path &path, const std::string &name) {
             std::cout << p;
 
             if (fs::is_symlink(p)) {
-                std::cout << GRAY << " symlink to " << fs::read_symlink(p) << WHITE;
+                std::cout << GRAY << " symlink to " << fs::read_symlink(p) << WHITE << std::endl;
+            } else {
+                magic_t magic_cookie = magic_open(MAGIC_SYMLINK | MAGIC_MIME_TYPE);
+                magic_load(magic_cookie, nullptr);
+                std::cout << GRAY << " [" << magic_file(magic_cookie, p.c_str()) << "]" << WHITE
+                          << std::endl;
+                magic_close(magic_cookie);
             }
-
-            magic_t magic_cookie = magic_open(MAGIC_SYMLINK | MAGIC_MIME_TYPE);
-            magic_load(magic_cookie, nullptr);
-            std::cout << GRAY << " [" << magic_file(magic_cookie, p.c_str()) << "]" << WHITE
-                      << std::endl;
-            magic_close(magic_cookie);
         }
     }
 }
