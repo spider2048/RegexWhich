@@ -8,7 +8,6 @@
 #include <sstream>
 #include <string>
 
-#define CYAN "\033[36m"
 #define GRAY "\033[90m"
 #define WHITE "\033[0m"
 namespace fs = std::filesystem;
