@@ -1,0 +1,12 @@
+Language:        Cpp
+BasedOnStyle:    Google
+IndentWidth:     4
+UseTab:          Never
+TabWidth:        4
+AccessModifierOffset: -4
+AllowShortIfStatementsOnASingleLine: false
+IndentCaseLabels: true
+ColumnLimit:     100
+PointerAlignment: Left
+ConstructorInitializerIndentWidth: 4
+SpaceAfterCStyleCast: false
