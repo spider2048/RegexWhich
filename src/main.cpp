@@ -1,5 +1,4 @@
 #include <magic.h>
-#include <sqlite3.h>
 
 #include <cstdlib>
 #include <filesystem>
