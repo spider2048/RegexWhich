@@ -15,10 +15,10 @@ $ rwhich <name>
 Examples:
 ```bash
 $ rwhich 'python.*'
-"/usr/bin/python" symlink to "python3" [application/x-pie-executable]
-"/usr/bin/python-config" symlink to "python3-config" [text/x-shellscript]
-"/usr/bin/python3" symlink to "python3.11" [application/x-pie-executable]
-"/usr/bin/python3-config" symlink to "python3.11-config" [text/x-shellscript]
+"/usr/bin/python" symlink to "python3"
+"/usr/bin/python-config" symlink to "python3-config"
+"/usr/bin/python3" symlink to "python3.11"
+"/usr/bin/python3-config" symlink to "python3.11-config"
 "/usr/bin/python3.11" [application/x-pie-executable]
 "/usr/bin/python3.11-config" [text/x-shellscript]
 ```
@@ -26,11 +26,10 @@ $ rwhich 'python.*'
 ```bash
 $ ./bin/rwhich '.*java.*'
 "/usr/bin/java2html" [text/x-shellscript]
-"/usr/bin/archlinux-java" [text/x-shellscript]
-"/usr/bin/java" symlink to "/usr/lib/jvm/default-runtime/bin/java" [application/x-pie-executable]
-"/usr/bin/javac" symlink to "/usr/lib/jvm/default/bin/javac" [application/x-pie-executable]
-"/usr/bin/javadoc" symlink to "/usr/lib/jvm/default/bin/javadoc" [application/x-pie-executable]
-"/usr/bin/javap" symlink to "/usr/lib/jvm/default/bin/javap" [application/x-pie-executable]
+"/usr/bin/java" symlink to "/usr/lib/jvm/default-runtime/bin/java"
+"/usr/bin/javac" symlink to "/usr/lib/jvm/default/bin/javac"
+"/usr/bin/javadoc" symlink to "/usr/lib/jvm/default/bin/javadoc"
+"/usr/bin/javap" symlink to "/usr/lib/jvm/default/bin/javap"
 "/usr/lib/jvm/default/bin/java" [application/x-pie-executable]
 "/usr/lib/jvm/default/bin/javac" [application/x-pie-executable]
 "/usr/lib/jvm/default/bin/javadoc" [application/x-pie-executable]
@@ -38,7 +37,6 @@ $ ./bin/rwhich '.*java.*'
 ```
 
 ## Building
-
 You need `libmagic`, `g++` and `make`
 
 Ubuntu
