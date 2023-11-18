@@ -18,6 +18,9 @@ bool search_file_name(const fs::path &path, const std::string &name) {
 }
 
 void search_in_path(const fs::path &path, const std::string &name) {
+    if (!fs::exists(path))
+        return;
+    
     for (const auto &entry : fs::directory_iterator(path)) {
         fs::path p = entry.path();
         if (fs::is_regular_file(p) && search_file_name(p.filename(), name)) {
